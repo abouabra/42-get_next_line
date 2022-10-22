@@ -6,7 +6,7 @@
 /*   By: abouabra <abouabra@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/13 15:37:28 by abouabra          #+#    #+#             */
-/*   Updated: 2022/10/16 17:01:05 by abouabra         ###   ########.fr       */
+/*   Updated: 2022/10/22 15:35:58 by abouabra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ char	*read_fd(int fd, char *line)
 
 char	*get_next_line(int fd)
 {
-	static char	*line[INT_MAX];
+	static char	*line[OPEN_MAX];
 	char		*final;
 
 	if (fd < 0 || BUFFER_SIZE <= 0)
