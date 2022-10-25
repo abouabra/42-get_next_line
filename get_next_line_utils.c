@@ -6,7 +6,7 @@
 /*   By: abouabra <abouabra@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/15 07:45:01 by abouabra          #+#    #+#             */
-/*   Updated: 2022/10/17 19:20:30 by abouabra         ###   ########.fr       */
+/*   Updated: 2022/10/25 07:38:31 by abouabra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,8 @@ char	*ft_strjoin(char *s1, char *s2)
 	if (!s1)
 	{
 		s1 = malloc(1 * sizeof(char));
+		if (!s1)
+			return (0);
 		s1[0] = 0;
 	}
 	if (s2 == NULL)
