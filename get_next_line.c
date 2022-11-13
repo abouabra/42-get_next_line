@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   get_next_line.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: abouabra <abouabra@student.1337.ma>        +#+  +:+       +#+        */
+/*   By: abouabra < abouabra@student.1337.ma >      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/13 15:37:28 by abouabra          #+#    #+#             */
-/*   Updated: 2022/10/16 17:00:24 by abouabra         ###   ########.fr       */
+/*   Updated: 2022/11/13 15:43:50 by abouabra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,18 +14,26 @@
 
 char	*read_fd(int fd, char *line)
 {
-	char	str[BUFFER_SIZE + 1];
+	char	*str;
 	int		counter;
 
+	str = malloc((BUFFER_SIZE + 1) * sizeof(char));
+	if (!str)
+		return (0);
 	counter = 1;
 	while (!ft_strchr(line, '\n') && counter != 0)
 	{
 		counter = read(fd, str, BUFFER_SIZE);
 		if (counter == -1)
+		{
+			free(str);
+			free(line);
 			return (0);
+		}
 		str[counter] = '\0';
 		line = ft_strjoin(line, str);
 	}
+	free(str);
 	return (line);
 }
 

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   get_next_line.h                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: abouabra <abouabra@student.1337.ma>        +#+  +:+       +#+        */
+/*   By: abouabra < abouabra@student.1337.ma >      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/13 15:30:35 by abouabra          #+#    #+#             */
-/*   Updated: 2022/10/16 17:00:21 by abouabra         ###   ########.fr       */
+/*   Updated: 2022/11/13 15:25:00 by abouabra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ char	*read_fd(int fd, char *line);
 char	*set_the_line(char *line);
 char	*set_next_line(char *line);
 
-size_t	ft_strlen(char *s);
+int		ft_strlen(char *s);
 char	*ft_strjoin(char *s1, char *s2);
 char	*ft_strchr(char *s, int c);
 
