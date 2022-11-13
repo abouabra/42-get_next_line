@@ -6,7 +6,7 @@
 /*   By: abouabra < abouabra@student.1337.ma >      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/13 15:37:28 by abouabra          #+#    #+#             */
-/*   Updated: 2022/11/13 15:43:50 by abouabra         ###   ########.fr       */
+/*   Updated: 2022/11/13 15:50:18 by abouabra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ char	*get_next_line(int fd)
 	static char	*line;
 	char		*final;
 
-	if (fd < 0 || BUFFER_SIZE <= 0)
+	if (fd < 0 || fd == 1 || fd == 2 || BUFFER_SIZE <= 0)
 		return (0);
 	final = 0;
 	line = read_fd(fd, line);
