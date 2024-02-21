@@ -5,6 +5,16 @@
 get_next_line is a function that reads a file line by line. It is a function that is part of the 42 curriculum and is used to teach students how to use static variables and memory allocation in C.
 
 ## Installation
+
+1. Clone the repository:
+```bash
+git clone https://github.com/abouabra/42-get_next_line.git
+```
+2. Change the current working directory:
+```bash
+cd 42-get_next_line
+```
+
 To use the get_next_line function in your project, include the `get_next_line.h` header file in your source code:
 
 ```c
